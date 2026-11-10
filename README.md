@@ -13,7 +13,7 @@ Faculty: Zerin Hasan Sahosh, Lecturer, Department of CSE
 
 The system is deployed on Vercel. To visit the site, click the deployment link shown below the repository description, or use the direct link below:
 
-**[Click here to visit CourseFlow — courseflow-sub.vercel.app](https://courseflow-sub.vercel.app)**
+**[Click here to visit CourseFlow](https://courseflow-sub.vercel.app)**
 
 No installation or local server is required. The application runs entirely in a web browser.
 
