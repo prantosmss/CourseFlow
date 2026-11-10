@@ -33,7 +33,7 @@ function renderSidebar(){
   const roleIcon=u.role==="student"?"user":u.role==="advisor"?"bookOpen":"shield";
   document.getElementById("sidebar").innerHTML=`
     <div class="sidebar-top">
-      <div class="brand-lockup"><img src="assets/images/logo.svg" alt="CourseFlow"></div>
+      <a class="brand-lockup sidebar-brand-link" href="index.html" aria-label="CourseFlow — back to the landing page" title="Back to CourseFlow home"><img class="sidebar-logo-mark" src="assets/images/logo.svg" alt=""><span class="sidebar-brand-name">CourseFlow</span></a>
       <button class="icon-btn sidebar-close" type="button" data-action="close-sidebar" aria-label="Close navigation">${icon("x",18)}</button>
     </div>
     <div class="role-chip"><div class="role-icon">${icon(roleIcon,15)}</div><div><b>${esc(roleLabel)}</b><span>${esc(u.dept)}</span></div></div>

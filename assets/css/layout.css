@@ -33,10 +33,13 @@
 .login-brand:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
 .login-brand:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-180px;bottom:-220px;background:radial-gradient(circle,color-mix(in oklch,var(--accent) 30%,transparent),transparent 68%);pointer-events:none}
 .brand-lockup{display:flex;align-items:center;gap:13px;position:relative;z-index:1}
-.brand-mark{width:46px;height:46px;border-radius:13px;background:#fff;color:var(--navy);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
-.brand-mark svg{width:25px;height:25px}
-.brand-name{font-weight:700;font-size:15px;letter-spacing:.01em;line-height:1.25}
-.brand-sub{font-size:11px;color:rgba(255,255,255,.58);letter-spacing:.05em;text-transform:uppercase;margin-top:3px}
+.login-brand-link{width:max-content;text-decoration:none;border-radius:14px}
+.login-logo-mark{width:48px;height:48px;display:block;flex:0 0 auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));transition:transform .18s ease,filter .18s ease}
+.login-brand-link:hover .login-logo-mark{transform:translateY(-2px);filter:drop-shadow(0 12px 26px rgba(0,0,0,.45))}
+.login-brand-link:focus-visible{outline:3px solid color-mix(in oklch,var(--accent) 55%,white);outline-offset:4px}
+.login-brand-text{display:grid;gap:3px}
+.brand-name{font-weight:700;font-size:15px;letter-spacing:.01em;line-height:1.25;color:#fff}
+.brand-sub{font-size:11px;color:rgba(255,255,255,.58);letter-spacing:.05em;text-transform:uppercase;line-height:1.25}
 .login-hero{position:relative;z-index:1;max-width:620px}
 .login-hero h1{font-family:var(--font-display);font-size:clamp(40px,5vw,66px);line-height:1.02;letter-spacing:-.03em;font-weight:500;margin:0 0 18px}
 .login-hero p{color:rgba(255,255,255,.68);font-size:clamp(15px,1.4vw,17px);line-height:1.65;max-width:480px;margin:0}
@@ -75,8 +78,11 @@
 .app-shell{display:flex;min-height:100vh}
 .sidebar{width:270px;flex:0 0 270px;background:var(--navy);color:#fff;display:flex;flex-direction:column;height:100vh;position:sticky;top:0;z-index:40}
 .sidebar-top{padding:22px 20px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.sidebar .brand-lockup{background:#fff;border-radius:12px;padding:8px 12px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
-.sidebar .brand-lockup img{width:146px;height:auto}
+.sidebar-brand-link{width:max-content;text-decoration:none;border-radius:10px;padding:2px;gap:10px}
+.sidebar-logo-mark{width:34px;height:34px;display:block;flex:0 0 auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.28));transition:transform .18s ease}
+.sidebar-brand-link:hover .sidebar-logo-mark{transform:translateY(-1px)}
+.sidebar-brand-link:focus-visible{outline:3px solid rgba(255,255,255,.35);outline-offset:3px}
+.sidebar-brand-name{font-size:15px;font-weight:700;color:#fff;letter-spacing:.01em;line-height:1.2}
 .sidebar-close{display:none;color:rgba(255,255,255,.7)}
 .sidebar-close:hover{background:rgba(255,255,255,.08);color:#fff}
 .role-chip{margin:0 18px 18px;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:9px}

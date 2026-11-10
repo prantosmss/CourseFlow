@@ -46,7 +46,7 @@ p{margin:0}
 .site-head .wrap{display:flex;align-items:center;gap:24px;min-height:68px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:var(--navy)}
 .brand b{color:var(--accent)}
-.brand svg{width:36px;height:36px}
+.brand img{width:36px;height:36px;display:block}
 nav{display:flex;gap:4px;margin-left:auto}
 nav a{padding:8px 12px;border-radius:8px;color:var(--fg-2);font-weight:500}
 nav a:hover{background:var(--surface-3)}
