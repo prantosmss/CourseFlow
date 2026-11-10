@@ -1,3 +1,5 @@
+/* CourseFlow landing page — interactive rules demo and screen index */
+
 /* ---------- Live registration demo (FR03, FR04, UC11) ---------- */
 const LIMIT = 18;
 const START = [

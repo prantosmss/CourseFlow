@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CourseFlow — Registration Portal | Stamford University Bangladesh</title>
+<meta name="description" content="CourseFlow registration portal for students, faculty advisors and administrators at Stamford University Bangladesh." />
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="login-screen" class="login-screen">
+  <section class="login-brand" aria-label="CourseFlow introduction">
+    <div class="brand-lockup">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5V5.5Z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/><path d="M8 7h8M8 10h5"/></svg>
+      </div>
+      <div><div class="brand-name">CourseFlow</div><div class="brand-sub">Stamford University Bangladesh</div></div>
+    </div>
+    <div class="login-hero">
+      <p class="eyebrow">Fall 2026 · Registration</p>
+      <h1>Your semester,<br>in one place.</h1>
+      <p>Search sections, register with confidence, and keep every approval, schedule and payment in a single, calm workspace.</p>
+    </div>
+    <div class="preview-card" aria-hidden="true">
+      <div class="preview-head"><span>This week</span><span class="live-dot">Registration open</span></div>
+      <div class="preview-course"><b>CSE 201 · Data Structures</b><span>Mon/Wed · 10:00</span></div>
+      <div class="preview-course"><b>MAT 201 · Linear Algebra</b><span>Sun/Tue · 14:00</span></div>
+      <div class="preview-course"><b>ENG 201 · Academic Writing</b><span>Mon/Wed · 14:00</span></div>
+    </div>
+  </section>
+  <section class="login-panel">
+    <div class="login-form-wrap">
+      <p class="eyebrow">Student &amp; faculty portal</p>
+      <h2>Sign in to CourseFlow</h2>
+      <p class="lede">Use your university ID to access registration, approvals and payments.</p>
+      <div id="login-error" class="login-error" role="alert"></div>
+      <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+          <label for="login-id">University ID</label>
+          <div class="input-wrap">
+            <span class="in-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <input class="input" id="login-id" name="id" autocomplete="username" placeholder="e.g. 2024001" spellcheck="false" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <div class="input-wrap">
+            <span class="in-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <input class="input" id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" />
+            <button type="button" class="trail-btn" id="toggle-password" aria-label="Show password" data-action="toggle-password"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block login-submit" type="submit" id="login-submit">Sign in to portal</button>
+      </form>
+      <div class="demo-box">
+        <div class="demo-title"><span>Demo credentials</span><span>Tap a role to sign in instantly</span></div>
+        <div class="cred-grid">
+          <button type="button" class="cred-card" data-action="fill-demo" data-id="2024001" data-pass="student123">
+            <span class="cred-role"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>Student</span>
+            <span class="cred-id">2024001</span><span class="cred-pass">student123</span>
+          </button>
+          <button type="button" class="cred-card" data-action="fill-demo" data-id="ADV01" data-pass="advisor123">
+            <span class="cred-role"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>Advisor</span>
+            <span class="cred-id">ADV01</span><span class="cred-pass">advisor123</span>
+          </button>
+          <button type="button" class="cred-card" data-action="fill-demo" data-id="ADMIN" data-pass="admin123">
+            <span class="cred-role"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v6c0 5 3.4 7.7 8 8 4.6-.3 8-3 8-8V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>Admin</span>
+            <span class="cred-id">ADMIN</span><span class="cred-pass">admin123</span>
+          </button>
+        </div>
+        <p class="login-foot">Demo environment · No real student records or payments are processed. Locked out? Open the Demo Guide and reset the data.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="app-shell" class="app-shell hidden">
+  <aside id="sidebar" class="sidebar" aria-label="Main navigation"></aside>
+  <div id="sidebar-overlay" class="sidebar-overlay" data-action="close-sidebar"></div>
+  <div class="app-main">
+    <header id="topbar" class="topbar"></header>
+    <main id="page-content" class="page-content"></main>
+  </div>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="false"></div>
+<button type="button" id="guide-fab" class="guide-fab" data-action="open-guide" aria-label="Open demo guide">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M8 7h8M8 11h6"/></svg>
+  Demo guide
+</button>
+<div id="guide-overlay" class="guide-overlay" data-action="close-guide"></div>
+<aside id="guide-panel" class="guide-panel" aria-label="Demo guide"></aside>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/views/student.js"></script>
+<script src="assets/js/views/catalog.js"></script>
+<script src="assets/js/views/enrollments.js"></script>
+<script src="assets/js/views/payments.js"></script>
+<script src="assets/js/views/advisor.js"></script>
+<script src="assets/js/views/admin.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
