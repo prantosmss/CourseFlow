@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CourseFlow — Online Course Registration</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="CourseFlow home">
+      <svg viewBox="0 0 56 56" aria-hidden="true"><rect x="4" y="4" width="48" height="48" rx="13" fill="#3f4fc4"/><path d="M35.5 20.7A10.5 10.5 0 1 0 35.5 35.3" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M26 28h15M37 23.5l4.5 4.5-4.5 4.5" fill="none" stroke="#bcc6ff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Course<b>Flow</b>
+    </a>
+    <nav aria-label="Main">
+      <a href="#try">Try it</a>
+      <a href="#roles">Roles</a>
+      <a href="#screens">Screens</a>
+      <a href="#demos">Demos</a>
+      <a class="keep btn btn-primary btn-sm" href="courseflow-registration.html">Open prototype</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="try">
+    <div class="wrap">
+      <div>
+        <h1>Register for your semester in under five minutes.</h1>
+        <p class="lead">CourseFlow checks prerequisites, class clashes, seats and your credit limit before you submit, so mistakes never reach your advisor.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="courseflow-registration.html">Open the prototype</a>
+          <a class="btn btn-secondary" href="#screens">Browse screens S01–S10</a>
+        </div>
+        <div class="facts">
+          <div><strong>4 checks</strong>run on every registration</div>
+          <div><strong>3 roles</strong>student, advisor, admin</div>
+          <div><strong>18 credits</strong>default semester limit</div>
+        </div>
+      </div>
+
+      <div class="demo" aria-labelledby="demo-title">
+        <div class="demo-top">
+          <h2 id="demo-title">Try the registration rules</h2>
+          <div class="meter"><span id="credits">15 / 18 credits</span><div class="meter-bar"><i id="bar"></i></div></div>
+        </div>
+        <ul class="list" id="offerings"></ul>
+        <div class="msg" id="msg" role="status" aria-live="polite">Pick a section and select Register to see how each rule responds.</div>
+        <div class="demo-foot">
+          <span>Mock data, nothing is saved.</span>
+          <button class="linkbtn" id="reset" type="button">Reset demo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="roles">
+    <div class="wrap">
+      <div class="head"><h2>One system, three ways in</h2><p>Each role signs in with an ID and password and lands on its own dashboard (FR01).</p></div>
+      <div class="cols3">
+        <div class="panel"><h3>Student</h3><p class="muted">Registers each semester.</p><ul><li>Search offered courses</li><li>Register, drop or join a waitlist</li><li>View schedule and status</li><li>Pay the invoice online</li></ul></div>
+        <div class="panel"><h3>Faculty advisor</h3><p class="muted">Approves advisees' choices.</p><ul><li>See pending registrations</li><li>Approve in one click</li><li>Reject with a required remark</li></ul></div>
+        <div class="panel"><h3>Administrator</h3><p class="muted">Registrar's office staff.</p><ul><li>Manage courses and offerings</li><li>Set seat capacity and dates</li><li>Create and disable users</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="screens">
+    <div class="wrap">
+      <div class="head"><h2>Ten prototype screens</h2><p>Each screen traces back to a use case and a functional requirement. Replace the blue boxes with your screenshots.</p></div>
+      <div class="tabs" id="tabs" role="group" aria-label="Filter screens by role"></div>
+      <div class="screens" id="screens-grid"></div>
+      <div class="legend" aria-label="Status badge colours">
+        <span class="badge b-pending">Pending</span><span class="badge b-approved">Approved</span><span class="badge b-rejected">Rejected</span><span class="badge b-waitlisted">Waitlisted</span><span class="badge b-dropped">Dropped</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="demos">
+    <div class="wrap">
+      <div class="head"><h2>Three demonstration flows</h2><p>Follow these in order during the presentation.</p></div>
+      <div class="cols3">
+        <div class="panel"><h3>1. Full registration</h3><ol class="steps"><li><span>S03</span>Student searches</li><li><span>S04</span>Registers, status Pending</li><li><span>S08</span>Advisor approves</li><li><span>S02</span>Student sees Approved</li><li><span>S07</span>Student pays</li></ol></div>
+        <div class="panel"><h3>2. Validation</h3><ol class="steps"><li><span>S04</span>Missing prerequisite</li><li><span>S04</span>Time clash</li><li><span>S04</span>Credit limit exceeded</li><li><span>S05</span>Full section, waitlist dialog</li></ol></div>
+        <div class="panel"><h3>3. Administration</h3><ol class="steps"><li><span>S01</span>Admin logs in</li><li><span>S09</span>Creates an offering</li><li><span>S10</span>Creates or disables a user</li></ol></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>CourseFlow</b><br>Stamford University Bangladesh · Department of CSE</div>
+    <div>System Design &amp; Software Engineering Sessional (0613CSE432)<br>Faculty: Zerin Hasan Sahosh</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
